@@ -1,0 +1,413 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.right-menu button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.right-menu input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    max-width: 45%;
+}
+
+.intro-text h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-item {
+    margin-bottom: 20px;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    color: black;
+}
+
+.stat-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.intro-image {
+    position: relative;
+    max-width: 45%;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+}
+
+.intro-image h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+/* News Section */
+.news {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item {
+    width: 48%;
+    position: relative;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #1f2c4b;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+main.project-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+/* Left section (stats) */
+.stats {
+    width: 40%;
+}
+
+.stat-item {
+    margin-bottom: 30px;
+}
+
+.stat-item h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2c4b;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #1f2c4b;
+}
+
+.divider {
+    width: 60%;
+    height: 2px;
+    background-color: #000;
+    margin: 20px 0;
+}
+
+/* Right section (project info) */
+.project-info {
+    width: 50%;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #1f2c4b;
+    margin-bottom: 10px;
+}
+
+.project-info h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1f2c4b;
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    font-size: 18px;
+    color: #1f2c4b;
+    margin-bottom: 40px;
+}
+
+.project-button {
+    background-color: #fdd400;
+    color: #1f2c4b;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #ffc107;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #1f2c4b;
+}
+
+.news-section {
+    width: 120%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.news-section h1 {
+    font-size: 22px;
+    color: #1f2c4b;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+}
+
+/* Individual News Items */
+.news-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-content {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 5px solid #fdd400;
+}
+
+.news-content .date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.news-content h2 {
+    font-size: 18px;
+    color: #1f2c4b;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.news-content .read-more {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.news-meta {
+    background-color: #fdd400;
+    padding: 10px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    color: #1f2c4b;
+}
+
+.news-meta p {
+    margin: 0;
+}
+
+/* Icon classes */
+.fa {
+    margin-right: 5px;
+}
+.footer {
+    background-color: #012169;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column {
+    max-width: 300px;
+}
+
+.footer-column h3 {
+    color: #FFC107;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.newsletter {
+    background-color: #FFC107;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #333;
+}
+
+.bottom-bar {
+    background-color: #F4F5F7;
+    text-align: center;
+    padding: 10px;
+    color: #012169;
+    font-size: 0.8rem;
+}
+

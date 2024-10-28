@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Explorer</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-section {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #ff6600, #ff6600); /* Orange gradient */
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 1rem;
+    }
+
+    .stats-section {
+      padding: 3rem 1rem;
+    }
+    .stats-item {
+      text-align: center;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .stats-item:hover {
+      transform: translateY(-10px);
+    }
+    .stats-item i {
+      font-size: 2.5rem;
+      color: #ff6600; /* Orange */
+      margin-bottom: 1rem;
+    }
+    .stats-item h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6600; /* Orange */
+    }
+    .stats-item p {
+      color: #6c757d;
+      font-size: 1rem;
+    }
+
+    .pledges-section {
+      padding: 3rem 1rem;
+      text-align: center;
+      background-color: #ff6600; /* Orange */
+      color: white;
+    }
+    .pledges-section h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .pledges-section p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    .btn-group {
+      margin-top: 2rem;
+    }
+    .btn-group .btn {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background-color: #ff6600; /* Light orange */
+      color: white;
+      border: none;
+    }
+    .btn-group .btn:hover {
+      background-color: #ff6600;
+      transform: translateY(-5px);
+    }
+/*Header*/
+.bg-gradient {
+    background: linear-gradient(90deg, rgba(255,165,0,0.8) 0%, rgba(255,255,255,0.8) 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 165, 0, 0.5);
+}
+
+.nav-link {
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(255,165,0,0.9);
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-item {
+        margin-bottom: 10px;
+    }
+}
+/*-------*/
+
+/* Footer */
+footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #555;
+            background-color: #f9f9f9;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      .stats-section {
+        padding: 2rem 1rem;
+      }
+      .stats-item {
+        padding: 1.5rem;
+      }
+      .stats-item h1 {
+        font-size: 1.8rem;
+      }
+      .pledges-section h1 {
+        font-size: 1.8rem;
+      }
+      .btn-group .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      .hero-section p {
+        font-size: 1rem;
+      }
+      .stats-section {
+        padding: 1.5rem 0.5rem;
+      }
+      .stats-item {
+        padding: 1rem;
+      }
+      .stats-item h1 {
+        font-size: 1.5rem;
+      }
+      .pledges-section h1 {
+        font-size: 1.5rem;
+      }
+      .pledges-section p {
+        font-size: 1rem;
+      }
+      .btn-group .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .info-section {
+            background-color: #ff6600;
+            padding: 3rem 1rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .main-heading {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+        .sub-heading {
+            font-size: 1.2rem;
+            color: #ff6600;
+            margin-bottom: 1rem;
+        }
+
+        .card-box {
+            background-color: white;
+            border: 2px solid #ff6600;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-box:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .card-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff6600;
+        }
+
+        .card-box p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .go-btn {
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .go-btn i {
+            margin-left: 0.5rem;
+        }
+
+        .go-btn:hover {
+            background-color: #ff6600;
+            transform: scale(1.05);
+        }
+
+        .project-box {
+        background-color: #ffffff;
+        border: 2px solid #f0f0f0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
+
+    .project-box:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-10px);
+        border-color: #ff6600;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    .project-box:hover .project-title {
+        color: #ff6600;
+    }
+
+    .project-desc {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .icon {
+        color: #ff6600;
+    }
+
+    /* footer */
+
+    .divider {
+            width: 80%;
+            height: 4px;
+            background-color: #ff6600; /* Match divider color to button */
+            margin: 2.5rem auto;
+            border-radius: 50px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #ff6600; /* Orange color for icons */
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff944d; /* Lighter orange on hover */
+            transform: translateY(-5px);
+        }
+
+        .print-icon {
+            font-size: 1.5rem;
+            color: #ff6600;
+            cursor: pointer;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .print-icon:hover {
+            color: #ff944d;
+            transform: scale(1.1);
+        }
+
+        .actions-section {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #555;
+            background-color: #f9f9f9;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+  </style>
+</head>
+<body>
+  <!-- <header class="container-fluid bg-orange py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <img src="assets/acomin.png" alt="Logo" class="img-fluid">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="community.html" class="nav-link">CLM Project</a></li>
+                <li class="nav-item"><a href="Research.html" class="nav-link">C19RM/RSSH Project</a></li>
+                <li class="nav-item"><a href="Data.html" class="nav-link">Impact Project</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">News & Stories</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" id="openForm">Monitoring Checklist</a></li>
+            </ul>
+        </nav>
+    </div>
+</header> -->
+<header class="container-fluid bg-gradient py-3">
+  <div class="container">
+      <nav class="navbar navbar-expand-md">
+          <a href="#" class="navbar-brand logo">
+              <img src="assets/acomin.png" alt="Logo" class="img-fluid">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                  <li class="nav-item"><a href="community.html" class="nav-link">CLM Project</a></li>
+                  <li class="nav-item"><a href="Research.html" class="nav-link">C19RM/RSSH Project</a></li>
+                  <li class="nav-item"><a href="Data.html" class="nav-link">Impact Project</a></li>
+                  <li class="nav-item"><a href="https://ee-eu.kobotoolbox.org/x/A9gy23Fb" class="nav-link">E-attendance</a></li>
+                  <li class="nav-item"><a href="https://ee-eu.kobotoolbox.org/x/yyNsC7dK" class="nav-link">CEI</a></li>
+                  <li class="nav-item"><a href="https://ee-eu.kobotoolbox.org/x/KEpqIPmL" class="nav-link">MSV</a></li>
+                  <li class="nav-item"><a href="https://accomis.acomin.org/login" class="nav-link">Sign-In</a></li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+</header>
+    <div class="container">
+        <!-- Main Section -->
+        <section class="info-section">
+            <h1 class="main-heading">Community Led Monitoring</h1>
+            <!-- <p class="sub-heading">The Global Fund invests US$5 billion a year to defeat HIV, tuberculosis and malaria and ensure a healthier, safer, equitable future for all.</p>
+            <p class="sub-heading">The Global Fund operates with a high degree of transparency, a core principle of our partnership. Downloadable data files and raw data related to grants, disbursements and more are available on this website.</p> -->
+            <p>ACOMIN is currently implementing Community Led Monitoring (the community component of the malaria global fund grant) across 13 GF supported States on malaria, covering 104 LGAs, sub-granting to and implementing through 208 CBOs and engaging 624 community volunteers
+            </p>
+        </section>
+
+        
+
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center" style="font-weight: bold; font-size: 2.5rem; color: #333;"></h2>
+        <div class="row text-center">
+            <!-- Community Led Monitoring -->
+            <div class="col-md-3 mb-3">
+                <a href="community.html" class="project-box d-block p-4 text-decoration-none">
+                    <div class="icon mb-3">
+                        <i class="fas fa-map fa-2x" style="color: #ff6600;"></i>
+                    </div>
+                    <h4 class="project-title">State</h4>
+                    <p class="project-desc">13</p>
+                </a>
+            </div>
+            <!-- C19RM/RSSH -->
+            <div class="col-md-3 mb-3">
+                <a href="Research.html" class="project-box d-block p-4 text-decoration-none">
+                    <div class="icon mb-3">
+                        <i class="fas fa-users fa-2x" style="color: #ff6600;"></i>
+                    </div>
+                    <h4 class="project-title">LGA</h4>
+                    <p class="project-desc">45</p>
+                </a>
+            </div>
+            <!-- Impact Project -->
+            <div class="col-md-3 mb-3">
+                <a href="Data.html" class="project-box d-block p-4 text-decoration-none">
+                    <div class="icon mb-3">
+                        <i class="fas fa-location-pin fa-2x" style="color: #ff6600;"></i>
+                    </div>
+                    <h4 class="project-title">CBO</h4>
+                    <p class="project-desc">208</p>
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="Data.html" class="project-box d-block p-4 text-decoration-none">
+                    <div class="icon mb-3">
+                        <i class="fas fa-users fa-2x" style="color: #ff6600;"></i>
+                    </div>
+                    <h4 class="project-title">Volunteers</h4>
+                    <p class="project-desc">608</p>
+                </a>
+            </div>
+        </div>
+      </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Social Icons -->
+        <section class="social-icons">
+            <a href="https://www.facebook.com/acominhq/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/acominno"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/acomin-nigeria-07a598262/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/acominhq/"><i class="fab fa-instagram"></i></a>
+          </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 ACOMIN. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76A8fD0UvUytXIzYffAnI3e5zI9mhD63F3Nsa4kDeevoIhp0r8HG5RTf6Twd6g5" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Explorer</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-section {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #ff6600, #ff6600); /* Orange gradient */
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 1rem;
+    }
+
+    .stats-section {
+      padding: 3rem 1rem;
+    }
+    .stats-item {
+      text-align: center;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .stats-item:hover {
+      transform: translateY(-10px);
+    }
+    .stats-item i {
+      font-size: 2.5rem;
+      color: #ff6600; /* Orange */
+      margin-bottom: 1rem;
+    }
+    .stats-item h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6600; /* Orange */
+    }
+    .stats-item p {
+      color: #6c757d;
+      font-size: 1rem;
+    }
+
+    .pledges-section {
+      padding: 3rem 1rem;
+      text-align: center;
+      background-color: #ff6600; /* Orange */
+      color: white;
+    }
+    .pledges-section h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .pledges-section p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    .btn-group {
+      margin-top: 2rem;
+    }
+    .btn-group .btn {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background-color: #ff6600; /* Light orange */
+      color: white;
+      border: none;
+    }
+    .btn-group .btn:hover {
+      background-color: #ff6600;
+      transform: translateY(-5px);
+    }
+/*Header*/
+.bg-gradient {
+    background: linear-gradient(90deg, rgba(255,165,0,0.8) 0%, rgba(255,255,255,0.8) 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 165, 0, 0.5);
+}
+
+.nav-link {
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(255,165,0,0.9);
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-item {
+        margin-bottom: 10px;
+    }
+}
+/*-------*/
+
+/* Footer */
+footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #555;
+            background-color: #f9f9f9;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      .stats-section {
+        padding: 2rem 1rem;
+      }
+      .stats-item {
+        padding: 1.5rem;
+      }
+      .stats-item h1 {
+        font-size: 1.8rem;
+      }
+      .pledges-section h1 {
+        font-size: 1.8rem;
+      }
+      .btn-group .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      .hero-section p {
+        font-size: 1rem;
+      }
+      .stats-section {
+        padding: 1.5rem 0.5rem;
+      }
+      .stats-item {
+        padding: 1rem;
+      }
+      .stats-item h1 {
+        font-size: 1.5rem;
+      }
+      .pledges-section h1 {
+        font-size: 1.5rem;
+      }
+      .pledges-section p {
+        font-size: 1rem;
+      }
+      .btn-group .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Footer */
+
+    .divider {
+            width: 80%;
+            height: 4px;
+            background-color: #ff6600; /* Match divider color to button */
+            margin: 2.5rem auto;
+            border-radius: 50px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #ff6600; /* Orange color for icons */
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff944d; /* Lighter orange on hover */
+            transform: translateY(-5px);
+        }
+
+        .print-icon {
+            font-size: 1.5rem;
+            color: #ff6600;
+            cursor: pointer;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .print-icon:hover {
+            color: #ff944d;
+            transform: scale(1.1);
+        }
+
+        .actions-section {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #555;
+            background-color: #f9f9f9;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+  </style>
+</head>
+<body>
+  <!-- <header class="container-fluid bg-orange py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <img src="assets/acomin.png" alt="Logo" class="img-fluid">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="community.html" class="nav-link">CLM Project</a></li>
+                <li class="nav-item"><a href="Research.html" class="nav-link">C19RM/RSSH Project</a></li>
+                <li class="nav-item"><a href="Data.html" class="nav-link">Impact Project</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">News & Stories</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" id="openForm">Monitoring Checklist</a></li>
+            </ul>
+        </nav>
+    </div>
+</header> -->
+<header class="container-fluid bg-gradient py-3">
+  <div class="container">
+      <nav class="navbar navbar-expand-md">
+          <a href="#" class="navbar-brand logo">
+              <img src="assets/acomin.png" alt="Logo" class="img-fluid">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                  <li class="nav-item"><a href="community.html" class="nav-link">CLM Project</a></li>
+                  <li class="nav-item"><a href="Research.html" class="nav-link">C19RM/RSSH Project</a></li>
+                  <li class="nav-item"><a href="Data.html" class="nav-link">Impact Project</a></li>
+                  <li class="nav-item"><a href="https://ee-eu.kobotoolbox.org/x/A9gy23Fb" class="nav-link">E-attendance</a></li>
+                  <li class="nav-item"><a href="https://ee-eu.kobotoolbox.org/x/yyNsC7dK" class="nav-link">CEI</a></li>
+                  <li class="nav-item"><a href="https://ee-eu.kobotoolbox.org/x/KEpqIPmL" class="nav-link">MSV</a></li>
+                  <li class="nav-item"><a href="https://accomis.acomin.org/login" class="nav-link">Sign-In</a></li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Data Explorer</h1>
+    <p>The Rivers IMPACT project is concerned with malaria intervention through effective and efficient service delivery to serve all including the under-served and poor at the grass root to reduce malaria burden in the state. The Rivers State government has proactively put to action this commitment by accessing the world bank loan in collaboration with a Non-state Actor (ACOMIN) to
+       effectively carry on the task to continuously lower the burden of malaria using a two-way 
+       approach of enabling environments of strong health systems strengthening with integration of malaria control, 
+       and multisectoral action for a swift reduction in malaria-related deaths through effective case management,
+        availability of commodities and prevention methods in 319 wards across 23 LGA in Rivers state.
+    </p>
+    <h1>Significance of Impact Project</h1>
+    <p>The significance of the Rivers malaria IMPACT project cannot be overemphasised and apart from
+       strengthening the health system, capacity building and behavioural change, it is imperative that outcomes and 
+       concerns observed will be communicated to policy makers/government which should be acted upon promptly by giving 
+       it the appropriate response it deserves. Consequently, this will present a new opportunity for the populace to benefit.
+        Furthermore, this is targeted at changing the narrative from high burden to less or no malaria burden in River State. 
+         The IMPACT project thus predicted an upsurge both in malaria prevention and control in the state due to effective
+          health surveillance systems and the strategic use of data to track progress and scoring to triangulate as well as 
+          match commodity distribution, treatment and the impacts.
+    </p>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4 col-sm-6">
+          <div class="stats-item">
+            <i class="fas fa-ribbon"></i>
+            <h1>25 million</h1>
+            <p>People on antiretroviral therapy for HIV in 2023</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="stats-item">
+            <i class="fas fa-lungs"></i>
+            <h1>7.11 million</h1>
+            <p>People with TB treated in 2023</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="stats-item">
+            <i class="fas fa-mosquito"></i>
+            <h1>227 million</h1>
+            <p>Mosquito nets distributed in 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pledges Section -->
+  <section class="pledges-section">
+    <h1>US$89 billion</h1>
+    <p>Pledges & Contributions</p>
+    <div class="btn-group">
+      <button type="button" class="btn">All</button>
+      <button type="button" class="btn">2001-2005</button>
+      <button type="button" class="btn">2006-2007</button>
+      <button type="button" class="btn">2008-2010</button>
+      <button type="button" class="btn">2011-2013</button>
+      <button type="button" class="btn">2014-2016</button>
+      <button type="button" class="btn">2017-2019</button>
+      <button type="button" class="btn">2020-2022</button>
+      <button type="button" class="btn">2023-2025</button>
+    </div>
+  </section>
+
+   <!-- Social Icons -->
+   <section class="social-icons">
+    <a href="https://www.facebook.com/acominhq/"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/acominno"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/acomin-nigeria-07a598262/"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/acominhq/"><i class="fab fa-instagram"></i></a>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer>
+<p>© 2024 ACOMIN. All Rights Reserved.</p>
+</footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
