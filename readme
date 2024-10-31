@@ -1,0 +1,67 @@
+<!-- 1.Features
+User Authentication: Secure signup and signin functionality.
+
+Data Fetching: Pulls JSON data from an API, processes it, and stores it in a MySQL database.
+
+Data Display: Provides data views in tabular format and charts.
+
+Session Management: Ensures secure, timed sessions for logged-in users.
+
+Cache Control: Disables caching on sensitive routes for added security.
+
+
+2.Tech Stack
+Backend: Node.js, Express.js
+
+Database: MySQL
+
+Authentication: bcrypt, express-session
+
+API Integration: Axios (fetching JSON data from KoBoToolbox)
+
+Frontend: EJS for templating, HTML, CSS
+
+Environment Variables: Dotenv for secure configuration
+
+3.Install dependencies: npm install
+
+4.Configure Environment Variables:
+Create a .env file in the project root.
+
+
+5.API Endpoints
+Authentication:
+
+GET /signup - Signup page
+POST /signup - Handles new user registration
+GET /signin - Signin page
+POST /signin - Handles user login
+GET /logout - Logs out the current user
+
+
+Data Management:
+GET /fetch-data - Fetches MSV data from an API and stores it in the database
+GET /display-data - Displays all stored MSV API data in a table view
+GET /display-data/:id - Displays a specific MSV data entry by ID
+GET /display-charts - Displays MSV data in a chart format
+
+
+Security Measures
+Password Security: Passwords are hashed using bcrypt (like encrypted).
+Session Management: Sessions are used for managing user authentication with an expiration time of 10 minutes.
+Cache Control: Caching is disabled on sensitive routes to prevent unauthorized access after logout.
+
+
+
+EJS
+
+Features
+Data Display Table: Uses DataTables for searchable, paginated, and sortable tables.
+Details Modal: A modal that displays more in-depth information for each client.
+AJAX for Dynamic Content: Dynamically fetches and displays specific client details upon request.
+Responsive UI: Responsive table and modal for seamless user experience.
+
+Consist of 
+Header Section: Contains navigation links (MSV, E-Attendance, View Charts, Logout).
+Data Table: Displays client data with columns like Quarter, CBO, Health Facility, etc.
+Modal: Hidden by default, appears when the "View Details" button is clicked for a specific row. -->
