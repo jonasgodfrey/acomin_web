@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSV Data Table</title>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+
+    <!-- Header section with title and navigation -->
+    <header>
+        <h1>MSV Data</h1>
+        <div>
+            <a href="/submission-table" class="chartr">Client Exit</a>
+            <a href="/attendance-table" class="chartr">E-Attendance </a>
+            <a href="/display-charts" class="chartr">View Charts</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </header>
+
+    <!-- Data table -->
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>MSV Module</th>
+                <th>State</th>
+                <th>Monitor Name</th>
+                <th>Monitor Designation</th>
+                <th>Reporting Period</th>
+                <th>Reporting Year</th>
+                <th>cboNameVisited</th>
+                <th>HF</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item => { %>
+                <tr>
+                    <td><%= item.msvModule %></td>
+                    <td><%= item.state %></td>
+                    <td><%= item.Monitor_Name %></td>
+                    <td><%= item.Monitor_Designation %></td>
+                    <td><%= item.Reporting_Period %></td>
+                    <td><%= item.Reporting_Year %></td>
+                    <td><%= item.cboNameVisited %></td>
+                    <td><%= item.HF %></td>
+                    <td><button class="details-btn" data-id="<%= item.id %>">View Details</button></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Details</h2>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTable
+            $('#dataTable').DataTable({
+                "pageLength": 10,
+                "searching": true,
+                "ordering": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+
+            // Open modal and populate details when button is clicked
+            $(document).on('click', '.details-btn', function () {
+                var id = $(this).data('id'); // Corrected method to get ID from button
+
+                // AJAX call to fetch details from the server
+                $.ajax({
+                    url: `http://localhost:3000/display-data/${id}`, // Send ID in the request
+                    method: 'GET',
+                    success: function (item) {
+                        // Populate the modal with the details
+                        $('#modal-details').html(`
+                         <p class="modal-details"><strong>1. Community Participation Adv Visit:</strong> ${item.community_participation_adv_visit}</p>
+                         <p class="modal-details"><strong>2. Level Of Community Participation on Adv Visit:</strong> ${item.issues_affecting_quality}</p>
+                         <p class="modal-details"><strong>3. Success Stories List:</strong> ${item.success_stories_list}</p>
+                         <p class="modal-details"><strong>4. List CAT Member Challenges:</strong> ${item.list_of_cat_member_challenges}</p>
+                           
+                        `);
+                        $('#myModal').fadeIn(); // Show modal
+                    },
+                    error: function () {
+                        alert('Error fetching details. Please try again.');
+                    }
+                });
+            });
+
+            // Close modal when clicking on <span> (x)
+            $('.close').click(function () {
+                $('#myModal').fadeOut();
+            });
+
+            // Close modal when clicking anywhere outside of the modal
+            $(window).click(function (event) {
+                if ($(event.target).is('#myModal')) {
+                    $('#myModal').fadeOut();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+

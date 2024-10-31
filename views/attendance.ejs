@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Data Table</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header section with title and navigation -->
+    <header>
+        <h1>E-Attendance Data </h1>
+        <div>
+            <a href="/display-data" class="chartr">MSV</a>
+            <a href="/submission-table" class="chartr">Client Exit</a>
+            <a href="/display-charts" class="chartr">View Charts</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </header>
+
+    <!-- Data table -->
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Name Activity</th>
+                <th>State List</th>
+                <th>Participant Name</th>
+                <th>Sex</th>
+                <th>Designation</th>
+                <th>Venue</th>
+                <th>Participant Org</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item=> { %>
+                <tr>
+                    <td>
+                        <%= item.eAtt_level %>
+                    </td>
+                    <td>
+                        <%= item.eAtt_name_activity %>
+                    </td>
+                    <td>
+                        <%= item.eAtt_state_list %>
+                    </td>
+                    <td>
+                        <%= item.participant_name %>
+                    </td>
+                    <td>
+                        <%= item.sex %>
+                    </td>
+                    <td>
+                        <%= item.Designation %>
+                    </td>
+                    <td>
+                        <%= item.eAtt_venue %>
+                    </td>
+                    <td>
+                        <%= item.participant_org %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTable
+            $('#dataTable').DataTable({
+                "pageLength": 10,
+                "searching": true,
+                "ordering": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+</body>
+
+</html>

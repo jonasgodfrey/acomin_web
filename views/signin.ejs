@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/signin.css">
+</head>
+<body>
+
+    <div class="signin-container">
+        <h2>Sign In</h2>
+        <form id="signinForm" action="/signin" method="POST">
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <!-- Button to switch to Sign Up page -->
+        <button class="switch-btn" onclick="window.location.href='/signup'">Don't have an account? Sign Up</button>
+    </div>
+
+    <script>
+        // Adding a loading animation to the submit button
+        const form = document.getElementById('signinForm');
+        form.addEventListener('submit', function (e) {
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.classList.add('loading');
+        });
+    </script>
+
+</body>
+</html>
+

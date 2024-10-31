@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Data Table</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Header section with title and navigation -->
+    <header>
+        <h1>Client Exit Data </h1>
+        <div>
+            <a href="/display-data" class="chartr">MSV </a>
+            <a href="/attendance-table" class="chartr">E-Attendance</a>
+            <a href="/display-charts" class="chartr">View Charts</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </header>
+
+    <!-- Data table -->
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Quater</th>
+                <th>CBO</th>
+                <th>Health Facility</th>
+                <th>Service Request</th>
+                <th>Services Received</th>
+                <th>State</th>
+                <th>Attitude</th>
+                <th>Name</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item=> { %>
+                <tr>
+
+                    <td>
+                        <%= item.qtr %>
+                    </td>
+                    <td>
+                        <%= item.cbo %>
+                    </td>
+                    <td>
+                        <%= item.hf %>
+                    </td>
+                    <td>
+                        <%= item.service_cat %>
+                    </td>
+                    <td>
+                        <%= item.serv_received %>
+                    </td>
+
+                    <td>
+                        <%= item.state %>
+                    </td>
+                    <td>
+                        <%= item.attitude %>
+                    </td>
+                    <td>
+                        <%= item.resp_name %>
+                    </td>
+
+                    <td><button class="details-btn" data-id="<%= item.id %>">View Details</button></td>
+
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Details</h2>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTable
+            $('#dataTable').DataTable({
+                "pageLength": 10,
+                "searching": true,
+                "ordering": false,
+                "lengthChange": true,
+                "autoWidth": false,
+                "responsive": true,
+
+            });
+            // Open modal and populate details when button is clicked
+            $(document).on('click', '.details-btn', function () {
+                var id = $(this).data('id'); // Get ID from button
+
+                // AJAX call to fetch details from the server
+                $.ajax({
+                    url: `http://localhost:3000/submission-table/${id}`, // Send ID in the request
+                    method: 'GET',
+                    success: function (item) {
+                        $('#modal-details').html(''); // Clear previous content
+
+                        // Build modal content conditionally
+                        let modalContent = '';
+
+                        // Define the fields you want to display
+                        const fieldsToDisplay = {
+
+                            'HIV Info': item.hiv_info,
+                            'HIV Source': item.infohiv_source,
+                            'HIV Prevention': item.hiv_prev,
+                            'Service': item.kindofserv,
+                            'HIV Duration': item.hivduration,
+                            'HIV Attitude': item.hivattitude,
+                            'HIV Gender': item.hivgender_hw,
+                            'Med Giv': item.hivmed_given,
+                            'Drug SideEffect': item.hivdrug_side,
+                            'HIV Discrimination': item.hivdescrimination,
+                            'HIV Assess Quality': item.hivassess_quality,
+
+
+                            'Mal Info': item.mal_info,
+                            'Mal Source': item.info_source,
+                            'Mal Prevention': item.prev_how,
+                            'Mal Med Giv': item.given_med,
+                            'Med SideEffect': item.side_effect,
+                            'Access HF': item.access_hf,
+                            'Attended By HF': item.attended_by_hf,
+                            'Offer ANC': item.offer_anc,
+                            'Receive IPT': item.receive_ipt,
+                            'Free Mal Awareness': item.free_mal_aware,
+                            'Pay to Receive': item.payto_receive,
+                            'Mal Tested': item.tested,
+                            'Result Tested': item.result_tested,
+                            'Mal Assess Quality': item.assess_quality,
+
+                            'TB Info': item.tb_info,
+                            'TB Source': item.tb_source,
+                            'TB Prevention': item.prev_tb,
+                            'Drug Given': item.tbdrug_given,
+                            'Drug SideEffect': item.drug_sideeffect,
+                            'TB Side Effect Explanation': item.tbsideeffect_exp,
+                            'TB Access HF': item.tbaccess_hf,
+                            'TB HW': item.tbhw,
+                            'TB ANC': item.tbanc,
+                            'Free TB Awareness': item.freetbaware,
+                            'TB Service Denial': item.tbservdeny,
+                            'Kind TB Service': item.kindtbserv,
+                            'Pay TB Service': item.paytbserv,
+                            'TB Duration': item.tbduration,
+                            'TB Attitude': item.tbattitude,
+                            'TB Assess Quality': item.tbassess_quality,
+
+                            // Add more fields as needed
+                        };
+
+                        // Loop through the fields and build the content if the value is not null
+                        for (const [label, value] of Object.entries(fieldsToDisplay)) {
+                            if (value !== null) {  // only print the value if its there
+                                modalContent += `<p><strong>${label}:</strong> ${value}</p>`;
+                            }
+                        }
+
+                        // Add the built content to the modal
+                        $('#modal-details').html(modalContent);
+
+                        // Show modal
+                        $('#myModal').fadeIn(); // Show modal
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching details:', status, error);
+                        alert('Error fetching details. Please try again.');
+                    }
+                });
+            });
+
+            // Close modal when clicking on <span> (x)
+            $('.close').click(function () {
+                $('#myModal').fadeOut();
+            });
+
+            // Close modal when clicking anywhere outside of the modal
+            $(window).click(function (event) {
+                if ($(event.target).is('#myModal')) {
+                    $('#myModal').fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Chart with State Filter</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Visualization</h1>
+    <div>
+        <a href="/display-data" class="chartr">View Data Table</a>
+        <a href="/logout" class="logout">Logout</a>
+    </div>
+</header>
+
+<!-- Main container -->
+<div class="container">
+    <div>
+        <label for="chartType">Choose Chart Type:</label>
+        <select id="chartType">
+            <option value="pie">Pie Chart</option>
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+            <option value="polarArea">Polar Chart</option>
+        </select>
+
+        <label for="stateFilter">Filter by State:</label>
+        <select id="stateFilter">
+            <option value="all">All States</option>
+        </select>
+    </div>
+
+    <!-- Create a canvas element where the chart will be drawn -->
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+    // Parse the chart data from the server-side (passed from Express)
+    const chartData = <%- JSON.stringify(chart) %>;
+
+    // Prepare data for the pie chart
+    const stateCounts = {};
+    chartData.forEach(item => {
+        if (stateCounts[item.state]) {
+            stateCounts[item.state]++;
+        } else {
+            stateCounts[item.state] = 1;
+        }
+    });
+
+    const labels = Object.keys(stateCounts); // State names as labels
+    const values = Object.values(stateCounts); // Number of occurrences of each state
+
+    // Populate state dropdown with unique state names
+    const stateFilter = document.getElementById('stateFilter');
+    labels.forEach(state => {
+        const option = document.createElement('option');
+        option.value = state;
+        option.textContent = state;
+        stateFilter.appendChild(option);
+    });
+
+    // Initialize the chart with default type (pie chart)
+    let chartType = 'pie'; // Default chart type
+    const ctx = document.getElementById('myChart').getContext('2d');
+    let myChart = new Chart(ctx, getChartConfig(chartType, labels, values));
+
+    // Function to return the chart configuration object
+    function getChartConfig(type, chartLabels, chartData) {
+        return {
+            type: type, // Type of chart (e.g., pie, bar, line)
+            data: {
+                labels: chartLabels, // X-axis labels
+                datasets: [{
+                    label: 'State',
+                    data: chartData, // Y-axis data
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(153, 102, 255, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, // Make chart responsive
+                scales: {
+                    y: {
+                        beginAtZero: true, // Ensure Y-axis starts at zero
+                        display: type !== 'pie' && type !== 'polarArea' // Only show Y-axis for non-pie and non-polarArea charts
+                    }
+                },
+                animation: {
+                    duration: 500,  
+                    easing: 'easeInOutCubic',  // Elastic easing for a stretch effect
+                    delay: 300,  // 300ms delay before starting
+                }
+            }
+        };
+    }
+
+    // Listen for changes in the dropdown menu (chart type)
+    document.getElementById('chartType').addEventListener('change', function () {
+        // Get the selected chart type
+        chartType = this.value;
+
+        // Destroy the old chart instance to update it with the new type
+        myChart.destroy();
+
+        // Create a new chart with the selected type
+        myChart = new Chart(ctx, getChartConfig(chartType, labels, values));
+    });
+
+    // Listen for changes in the state filter dropdown
+    document.getElementById('stateFilter').addEventListener('change', function () {
+        const selectedState = this.value;
+
+        // Filter data based on selected state
+        const filteredLabels = selectedState === 'all' ? labels : [selectedState];
+        const filteredValues = selectedState === 'all' ? values : [stateCounts[selectedState]];
+
+        // Destroy the old chart instance
+        myChart.destroy();
+
+        // Create a new chart with the filtered data
+        myChart = new Chart(ctx, getChartConfig(chartType, filteredLabels, filteredValues));
+
+    });
+</script>
+</body>
+</html>
