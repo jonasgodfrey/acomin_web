@@ -171,7 +171,7 @@
                         <!-- About Image 1 Start -->
                         <div class="about-img-1">
                             <figure class="image-anime">
-                                <img src="images/acomin/abt.JPEG" alt="">
+                                <img src="images/acomin/abt.jpeg" alt="">
                             </figure>
                         </div>
                         <!-- About Image 1 End -->
@@ -179,7 +179,7 @@
                         <!-- About Image 2 Start -->
                         <div class="about-img-2">
                             <figure class="image-anime">
-                                <img src="images/acomin/W4.JPG" alt="">
+                                <img src="images/acomin/W4.jpg" alt="">
                             </figure>
                         </div>
                         <!-- About Image 2 End -->
@@ -276,7 +276,7 @@
                     <div class="causes-item wow fadeInUp">
                         <div class="causes-image">
                             <figure class="image-anime">
-                                <img src="images/acomin/mal3.JPG" alt="">
+                                <img src="images/acomin/mal3.jpg" alt="">
                             </figure>
                         </div>
                         <div class="causes-body">
@@ -297,7 +297,7 @@
                     <div class="causes-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="causes-image">
                             <figure class="image-anime">
-                                <img src="images/acomin/mal1.JPG" alt="">
+                                <img src="images/acomin/mal1.jpg" alt="">
                             </figure>
                         </div>
                         <div class="causes-body">
@@ -318,7 +318,7 @@
                     <div class="causes-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="causes-image">
                             <figure class="image-anime">
-                                <img src="images/acomin/mal2.JPG" alt="">
+                                <img src="images/acomin/mal2.jpg" alt="">
                             </figure>
                         </div>
                         <div class="causes-body">
@@ -401,7 +401,7 @@
                         <!-- What We Do Image 1 Start -->
                         <div class="what-we-do-img-1">
                             <figure class="image-anime reveal">
-                                <img src="images/acomin/W5.JPG" alt="">
+                                <img src="images/acomin/W5.jpg" alt="">
                             </figure>
                         </div>
                         <!-- What We Do Image 1 End -->
@@ -409,7 +409,7 @@
                         <!-- What We Do Image 2 Start -->
                         <div class="what-we-do-img-2">
                             <figure class="image-anime">
-                                <img src="images/acomin/W8.JPG" alt="">
+                                <img src="images/acomin/W8.jpg" alt="">
                             </figure>
                         </div>
                         <!-- What We Do Image 2 End -->
@@ -438,12 +438,12 @@
                     <div class="why-choose-images">
                         <div class="why-choose-image-1">
                             <figure class="image-anime">
-                                <img src="images/acomin/WHO.JPEG" alt="">
+                                <img src="images/acomin/WHO.jpeg" alt="">
                             </figure>
                         </div>
                         <div class="why-choose-image-2">
                             <figure class="image-anime">
-                                <img src="images/acomin/W3.JPG" alt="">
+                                <img src="images/acomin/W3.jpg" alt="">
                             </figure>
                         </div>
                     </div>
@@ -529,7 +529,7 @@
                             <!-- Our Features Image Start -->
                             <div class="our-features-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/W5.JPG" alt="">
+                                    <img src="images/acomin/W5.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- Our Features Image End -->
@@ -554,7 +554,7 @@
                             <!-- Our Features Image Start -->
                             <div class="our-features-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/mal3.JPG" alt="">
+                                    <img src="images/acomin/mal3.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- Our Features Image End -->
@@ -579,7 +579,7 @@
                             <!-- Our Features Image Start -->
                             <div class="our-features-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/child.JPG" alt="">
+                                    <img src="images/acomin/child.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- Our Features Image End -->
@@ -631,7 +631,7 @@
                         <div class="program-image">
                             <a href="program-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/media.JPEG" alt="">
+                                    <img src="images/acomin/media.jpeg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -654,7 +654,7 @@
                         <div class="program-image">
                             <a href="program-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/W6.JPG" alt="">
+                                    <img src="images/acomin/W6.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -677,7 +677,7 @@
                         <div class="program-image">
                             <a href="program-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/msv1.JPG" alt="">
+                                    <img src="images/acomin/msv1.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -750,7 +750,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/W7.JPG" alt="">
+                                    <img src="images/acomin/W7.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -774,7 +774,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/fgd2.JPG" alt="">
+                                    <img src="images/acomin/fgd2.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -798,7 +798,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/msv.JPG" alt="">
+                                    <img src="images/acomin/msv.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -822,7 +822,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/fgd.JPG" alt="">
+                                    <img src="images/acomin/fgd.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -859,7 +859,7 @@
                     <div class="testimonials-image">
                         <div class="testimonials-img">
                             <figure class="image-anime reveal">
-                                <img src="images/acomin/W4.JPG" alt="">
+                                <img src="images/acomin/W4.jpg" alt="">
                             </figure>
                         </div>
 
@@ -989,7 +989,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box health food">
                             <figure class="image-anime">
-                                <img src="images/acomin/msv1.JPG" alt="">
+                                <img src="images/acomin/msv1.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -997,7 +997,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box food">
                             <figure class="image-anime">
-                                <img src="images/acomin/msv.JPG" alt="">
+                                <img src="images/acomin/msv.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1005,7 +1005,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box food education">
                             <figure class="image-anime">
-                                <img src="images/acomin/mal2.JPG" alt="">
+                                <img src="images/acomin/mal2.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1013,7 +1013,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box health education">
                             <figure class="image-anime">
-                                <img src="images/acomin/fgd.JPG" alt="">
+                                <img src="images/acomin/fgd.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1021,7 +1021,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box health">
                             <figure class="image-anime">
-                                <img src="images/acomin/fgd1.JPG" alt="">
+                                <img src="images/acomin/fgd1.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1029,7 +1029,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box food education">
                             <figure class="image-anime">
-                                <img src="images/acomin/msv1.JPG" alt="">
+                                <img src="images/acomin/msv1.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1037,7 +1037,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box health">
                             <figure class="image-anime">
-                                <img src="images/acomin/W1.JPG" alt="">
+                                <img src="images/acomin/W1.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1045,7 +1045,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box food">
                             <figure class="image-anime">
-                                <img src="images/acomin/W2.JPG" alt="">
+                                <img src="images/acomin/W2.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1053,7 +1053,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box education">
                             <figure class="image-anime">
-                                <img src="images/acomin/W3.JPG" alt="">
+                                <img src="images/acomin/W3.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1061,7 +1061,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box health education">
                             <figure class="image-anime">
-                                <img src="images/acomin/W2.JPG" alt="">
+                                <img src="images/acomin/W2.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1114,7 +1114,7 @@
                         <div class="post-featured-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/attitude.JPG" alt="">
+                                    <img src="images/acomin/attitude.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -1154,7 +1154,7 @@
                         <div class="post-featured-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/Services.JPG" alt="">
+                                    <img src="images/acomin/Services.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -1194,7 +1194,7 @@
                         <div class="post-featured-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/quality.JPG" alt="">
+                                    <img src="images/acomin/quality.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
