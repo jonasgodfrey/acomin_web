@@ -302,7 +302,7 @@
                         </div>
                         <div class="causes-body">
                             <div class="causes-content">
-                                <h3>Technical Service & Support to NACA</h3>
+                                <h3>CLM C19 RM</h3>
                                 <p>Support on COVID-19 Response Mechanism. Funded by Global Fund.</p>
                             </div>
                             <!-- <div class="causes-button">
@@ -318,12 +318,12 @@
                     <div class="causes-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="causes-image">
                             <figure class="image-anime">
-                                <img src="images/acomin/mal2.jpg" alt="">
+                                <img src="images/acomin/rivers.jpg" alt="">
                             </figure>
                         </div>
                         <div class="causes-body">
                             <div class="causes-content">
-                                <h3>Impact Project in Rivers State</h3>
+                                <h3>IMPACT Project Engaged by Rivers State Nigeria</h3>
                                 <p>Funded by World Bank</p>
                             </div>
                             <!-- <div class="causes-button">
@@ -563,7 +563,7 @@
                             <div class="our-features-content">
                                 <div class="our-features-body">
                                     <h2><span class="counter">31289</span>+</h2>
-                                    <h3>Treated of Malaria</h3>
+                                    <h3>Treated Malaria Cases</h3>
                                     <p>Malaria: State of the fight</p>
                                 </div>
                                 <!-- <div class="icon-box">
