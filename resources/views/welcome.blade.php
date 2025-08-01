@@ -555,7 +555,7 @@
                         <div class="program-image">
                             <a href="program-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/ADVOCACYVISIT.jpeg" alt="">
+                                    <img src="images/acomin/advocacyvisit.jpeg" alt="">
                                 </figure>
                             </a>
                         </div>
