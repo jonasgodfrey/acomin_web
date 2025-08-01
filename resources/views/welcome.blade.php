@@ -332,7 +332,7 @@
                         </div>
                     </div>
                     <!-- Causes Item End -->
-                </div>
+                </div>  
             </div>
         </div>
    </div>
@@ -443,7 +443,7 @@
                         </div>
                         <div class="why-choose-image-2">
                             <figure class="image-anime">
-                                <img src="images/acomin/W3.jpg" alt="">
+                                <img src="images/acomin/aboutacomin.jpg" alt="">
                             </figure>
                         </div>
                     </div>
@@ -491,8 +491,8 @@
                             
                             <!-- Why Choose Counters Item Start -->
                             <div class="why-choose-counter-item">
-                                <h2><span class="counter">600</span>+</h2>
-                                <p>Accountability Team</p>
+                                <h2><span class="counter">13</span>+</h2>
+                                <p>Implementing States</p>
                             </div>
                             <!-- Why Choose Counters Item End -->
                         </div>
@@ -505,106 +505,7 @@
    </div>
    <!-- Why Choose Us Section End -->
 
-    <!-- Our Features Section Start -->
-    <div class="our-features">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <!-- <h3 class="wow fadeInUp">our feature</h3> -->
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">2024 Highlights</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s"></p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Our Features List Start -->
-                    <div class="our-features-list">
-                        <!-- Our Features Item Start -->
-                        <div class="our-features-item">
-                            <!-- Our Features Image Start -->
-                            <div class="our-features-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/acomin/W5.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Our Features Image End -->
-
-                            <!-- Our Features Content Start -->
-                            <div class="our-features-content">
-                                <div class="our-features-body">
-                                    <h2><span class="counter">1095</span>+</h2>
-                                    <h3>Pregnant Women</h3>
-                                    <p>Pregnant Women who received treatment for Malaria</p>
-                                </div>
-                                <!-- <div class="icon-box">
-                                    <img src="images/icon-our-features-1.svg" alt="">
-                                </div> -->
-                            </div>
-                            <!-- Our Features Content End -->
-                        </div>
-                        <!-- Our Features Item End -->
-
-                        <!-- Our Features Item Start -->
-                        <div class="our-features-item">
-                            <!-- Our Features Image Start -->
-                            <div class="our-features-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/acomin/mal3.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Our Features Image End -->
-
-                            <!-- Our Features Content Start -->
-                            <div class="our-features-content">
-                                <div class="our-features-body">
-                                    <h2><span class="counter">31289</span>+</h2>
-                                    <h3>Treated Malaria Cases</h3>
-                                    <p>Malaria: State of the fight</p>
-                                </div>
-                                <!-- <div class="icon-box">
-                                    <img src="images/icon-our-features-2.svg" alt="">
-                                </div> -->
-                            </div>
-                            <!-- Our Features Content End -->
-                        </div>
-                        <!-- Our Features Item End -->
-
-                        <!-- Our Features Item Start -->
-                        <div class="our-features-item">
-                            <!-- Our Features Image Start -->
-                            <div class="our-features-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/acomin/child.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Our Features Image End -->
-
-                            <!-- Our Features Content Start -->
-                            <div class="our-features-content">
-                                <div class="our-features-body">
-                                    <h2><span class="counter">28431</span>+</h2>
-                                    <h3>Suspected Cases</h3>
-                                    <p>Suspected cases of malaria</p>
-                                </div>
-                                <!-- <div class="icon-box">
-                                    <img src="images/icon-our-features-3.svg" alt="">
-                                </div> -->
-                            </div>
-                            <!-- Our Features Content End -->
-                        </div>
-                        <!-- Our Features Item End -->
-                    </div>
-                    <!-- Our Features List End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Features Section End -->
+    
 
    <!-- Our Program Section Start -->
    <div class="our-program">
@@ -654,7 +555,7 @@
                         <div class="program-image">
                             <a href="program-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/W6.jpg" alt="">
+                                    <img src="images/acomin/ADVOCACYVISIT.jpeg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -677,7 +578,7 @@
                         <div class="program-image">
                             <a href="program-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/acomin/msv1.jpg" alt="">
+                                    <img src="images/acomin/focus.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
@@ -750,7 +651,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/W7.jpg" alt="">
+                                    <img src="images/acomin/fgd2.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -774,7 +675,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/fgd2.jpg" alt="">
+                                    <img src="images/acomin/cei.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -798,7 +699,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/msv.jpg" alt="">
+                                    <img src="images/acomin/davo.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -822,7 +723,7 @@
                             <!-- How It Work Image Start -->
                             <div class="how-it-work-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/acomin/fgd.jpg" alt="">
+                                    <img src="images/acomin/monthly.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- How It Work Image End -->
@@ -859,7 +760,7 @@
                     <div class="testimonials-image">
                         <div class="testimonials-img">
                             <figure class="image-anime reveal">
-                                <img src="images/acomin/W4.jpg" alt="">
+                                <img src="images/acomin/success.jpeg" alt="">
                             </figure>
                         </div>
 
@@ -989,7 +890,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box health food">
                             <figure class="image-anime">
-                                <img src="images/acomin/msv1.jpg" alt="">
+                                <img src="images/acomin/jigs.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
@@ -1005,7 +906,7 @@
                         <!-- Gallery Item Box Start -->
                         <div class="gallery-item-box food education">
                             <figure class="image-anime">
-                                <img src="images/acomin/mal2.jpg" alt="">
+                                <img src="images/acomin/W6.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Gallery Item Box End -->
