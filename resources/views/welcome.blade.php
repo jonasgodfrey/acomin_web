@@ -71,15 +71,15 @@
                                 <li class="nav-item"><a class="nav-link" href="#">Interventions</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">News</a></li> -->
                                 <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Tools</a>
-                                    <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="https://accomis.acomin.org/login">ACCOMIS</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://ee-eu.kobotoolbox.org/x/A9gy23Fb">e-Attendance</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://ee-eu.kobotoolbox.org/x/KEpqIPmL">MSV</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://ee-eu.kobotoolbox.org/x/yyNsC7dK">CEI</a></li>
+                               
+                                                                          
+                                         <li class="nav-item"><a class="nav-link" href="https://accomis.acomin.org/login" target="_blank">ACCOMIS</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://ee-eu.kobotoolbox.org/x/A9gy23Fb" target="_blank">e-Attendance</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://ee-eu.kobotoolbox.org/x/KEpqIPmL" target="_blank">MSV</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://ee-eu.kobotoolbox.org/x/yyNsC7dK" target="_blank">CEI</a></li>
                                         
-                                    </ul>
-                                </li>
+                                    
+                                
                                                          
                             </ul>
                         </div>
@@ -1220,7 +1220,7 @@
                     <div class="col-md-12">
                         <!-- Copyright Text Start -->
                         <div class="copyright-text">
-                            <p>Copyright © 2025 All Rights Reserved.</p>
+                            <p>Copyright © 2026 All Rights Reserved.</p>
                         </div>
                         <!-- Copyright Text End -->
                     </div>
